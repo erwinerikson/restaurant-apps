@@ -1,0 +1,162 @@
+$color_body: #424242;
+$background_header: #00ff9c;
+$background_main: #ecdfcc;
+
+$font_sans-serif: sans-serif;
+$font_roboto: "Roboto";
+$font_merienda: "Merienda";
+
+$text_shadow:
+  -1px 1px 1px rgba(0, 0, 0, 0.4),
+  1px -1px 0 rgba(255, 255, 255, 1);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $font_roboto, $font_sans-serif;
+  font-size: 12px;
+  color: $color_body;
+}
+
+img {
+  display: block;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  align-items: center;
+  background-color: $background_header;
+}
+
+.header__inner {
+  display: grid;
+  width: 100%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__logo {
+  margin: auto;
+  width: 40px;
+}
+
+.header__title {
+  font-family: $font_merienda;
+  font-weight: 600;
+  font-size: 3em;
+  margin: 0.5em 0em;
+  display: inline-block;
+  color: #212121;
+  text-shadow: $text_shadow;
+}
+
+.header__menu {
+  font-size: 32px;
+  margin: 5px auto;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  text-align: right;
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+.nav {
+  width: 100%;
+  margin: auto;
+  a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: #616161;
+  }
+  a:hover {
+    color: #000;
+  }
+}
+
+.nav__list {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.nav__item {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    background-position: center;
+    object-position: center;
+  }
+  img:focus {
+    width: 98%;
+    outline: 4px dashed orange;
+  }
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: $background_main;
+}
+
+#maincontent {
+  width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+  text-decoration: none;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}

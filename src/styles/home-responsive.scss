@@ -1,0 +1,74 @@
+@media screen and (max-width: 499px) {
+  .maincontent__title {
+    font-size: 1.9em;
+    padding: 10px;
+  }
+  #restaurant-lists {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 1rem;
+  }
+  .card-home {
+    .card-item {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    #card-img {
+      width: 96%;
+      height: auto;
+      border-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-name {
+      font-size: 1.46em;
+    }
+    .card-city {
+      font-size: 1.29em;
+    }
+    .rate_widget {
+      p {
+        font-size: 1.9em;
+      }
+      img {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card-home {
+    #card-img {
+      width: 96%;
+      height: auto;
+    }
+    .card-name {
+      font-size: 1.5em;
+    }
+    .card-city {
+      font-size: 1.35em;
+    }
+    .rate_widget p {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .card-detail-top {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 988px) {
+  .card-home #card-img {
+    width: auto;
+    height: 310px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #commentcontent {
+    max-width: 1000px;
+  }
+}

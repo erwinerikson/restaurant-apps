@@ -1,0 +1,9 @@
+import "./app-footer.js";
+import "./restaurant-item.js";
+import "./restaurant-detail.js";
+import "./restaurant-review.js";
+import "./form-control.js";
+import "./form-control-textarea.js";
+import "./like-button.js";
+import "./liked-button.js";
+import "./indicator-loading.js";

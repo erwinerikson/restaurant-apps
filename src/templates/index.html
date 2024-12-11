@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#DB0000" />
+    <meta
+      name="description"
+      content="Memperkenalkan restoran kami yang tergabung dalam Best Food yang tersebar di seluruh penjuru nusantara."
+    />
+
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="app.webmanifest" />
+    <link rel="icon" href="./images/pavicon.png" sizes="48x48" />
+
+    <title>Best Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Atkinson Hyperlegible"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  </head>
+  <body>
+    <div id="loading"></div>
+    <a href="#maincontent" class="skip-link">Skip To Content</a>
+    <header class="header">
+      <div class="header__inner">
+        <img
+          tabindex="0"
+          class="header__logo"
+          src="./images/icon-cook-restaurant.png"
+          alt="Logo Usaha"
+        />
+        <h1 tabindex="0" class="header__title">Best Food</h1>
+      </div>
+      <a
+        tabindex="0"
+        id="menu"
+        class="header__menu"
+        aria-label="select page menu"
+        >☰</a
+      >
+      <nav id="drawer" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#/favorite">Favorite</a></li>
+          <li class="nav__item">
+            <a
+              href="https://www.linkedin.com/in/erwin-erikson-567535271"
+              target="_blank"
+              rel="noopener"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 600px)" srcset="./hero-image_2-small.jpg" aria-label="Gambar hidangan">
+        <source media="(min-width: 601px)" srcset="./hero-image_2-large.jpg" aria-label="Gambar hidangan">
+        <img
+          tabindex="0"
+          src="./images/heros/hero-image_2.jpg"
+          alt="Gambar hidangan"
+        />
+      </picture>
+    </div>
+    <main>
+      <div tabindex="0" class="maincontent" id="maincontent"></div>
+      <div id="commentcontent">
+        <div class="comment__head">
+          <div class="comment_icon_container">
+            <img
+              tabindex="0"
+              class="comment__icon"
+              src="./images/icon-comment.png"
+              alt="Ikon Komentar"
+            />
+          </div>
+          <h2 tabindex="0" class="comment__title">Leave a Review</h2>
+        </div>
+        <section id="comment-form" class="comment-card">
+          <form id="form-input" class="card-body c-card">
+            <form-control
+              type="text"
+              input-name="nama"
+              placeholder="mis : Bambang"
+              min-length="3"
+              max-length="100"
+              label="Nama"
+              description="Isi dengan nama (min 3 karakter, max 100 karakter)"
+            ></form-control>
+            <form-control-textarea
+              type="text"
+              input-name="body"
+              placeholder="mis : Saya puas dengan pelayanan di Fairy Cafe."
+              label="Review"
+              description="Isi dengan review (min 3 karakter)"
+              min-length="3"
+              rows="3"
+            ></form-control-textarea>
+            <input type="hidden" id="idRest" name="id" />
+            <button id="send-button">Kirim</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <app-footer></app-footer>
+  </body>
+</html>
