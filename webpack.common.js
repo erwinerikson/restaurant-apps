@@ -73,9 +73,6 @@ module.exports = {
         {
           from: path.resolve(__dirname, "src/public/"),
           to: path.resolve(__dirname, "dist/"),
-          globOptions: {
-            ignore: ['**/images/heros/**'],
-          },
         },
       ],
     }),
@@ -86,14 +83,14 @@ module.exports = {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'themoviedb-api',
+            cacheName: 'restaurant-api',
           },
         },
         {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/small/'),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'themoviedb-image-api',
+            cacheName: 'restaurant-image-api',
           },
         },
       ],
