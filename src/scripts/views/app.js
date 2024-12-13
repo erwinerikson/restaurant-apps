@@ -38,6 +38,16 @@ class App {
     this._initialCommentDisplay(url);
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const skipLink = document.querySelector(".skip-link");
+    const mainContent = document.querySelector("#maincontent");
+    skipLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      mainContent.scrollIntoView({behavior: "smooth"});
+      mainContent.focus();
+      skipLink.blur();
+    });
+
     this._showLoading(false);
   }
 
